@@ -1,8 +1,14 @@
 import smtplib
+import getpass
+import pyttsx3
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-
+inpass = getpass.getpass ("Enter your password :")
+apass = "rahuljoshi"
+if inpass!=apass:
+    pyttsx3.speak("Incorrect Password Try Again ")
+    exit()
 from_addr='email_address'
 to_addr=['abcd@gmail.com','asdavegf.@gmail.com']
 msg=MIMEMultipart()
